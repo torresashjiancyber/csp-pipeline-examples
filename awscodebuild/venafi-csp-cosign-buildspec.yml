@@ -10,7 +10,7 @@ phases:
       - wget https://$TPP_URL/csc/clients/venafi-csc-latest-x86_64.deb
       - dpkg -i venafi-csc-latest-x86_64.deb
       - echo Download and install sigstore/cosign
-      - wget https://github.com/sigstore/cosign/releases/download/v1.13.1/cosign-linux-pivkey-pkcs11key-amd64 -O cosign
+      - wget https://github.com/sigstore/cosign/releases/download/v2.2.4/cosign-linux-pivkey-pkcs11key-amd64 -O cosign
       - chmod +x cosign
       - mv cosign /usr/bin/cosign
       - echo Logging in to Docker Hub...
