@@ -45,7 +45,7 @@ objects:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: redhat-openjdk18-openshift:1.1
+          name: ubi8-openjdk-11:latest
           namespace: ${IMAGE_STREAM_NAMESPACE}
       type: Source
     successfulBuildsHistoryLimit: 5

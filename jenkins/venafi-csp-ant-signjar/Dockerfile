@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.20
 
 #Create Ant Dir
 RUN mkdir -p /opt/ant/
@@ -8,8 +8,8 @@ RUN wget http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.8-bin.tar.gz
 RUN tar -xvzf /opt/ant/apache-ant-1.9.8-bin.tar.gz -C /opt/ant/
 # Remove tar file
 RUN rm -f /opt/ant/apache-ant-1.9.8-bin.tar.gz
-#Drop Sonarqube lib
-RUN wget http://downloads.sonarsource.com/plugins/org/codehaus/sonar-plugins/sonar-ant-task/2.3/sonar-ant-task-2.3.jar -P /opt/ant/apache-ant-1.9.8/lib/
+# Note: sonar-ant-task 2.3 removed - abandoned since 2014
+# For SonarQube integration, use sonar-scanner-cli or SonarQube Gradle/Maven plugins instead
 #Install JDK 1.8
 RUN apk --update add openjdk8
 #Install GIT
